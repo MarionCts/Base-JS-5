@@ -85,8 +85,6 @@ const stock = {
 let rupture = [];
 
 for (fruit in stock) {
-    console.log(fruit);
-    console.log(stock[fruit]);
     while (stock[fruit] > 0) {
         (stock[fruit])--;
     }
@@ -97,3 +95,29 @@ for (fruit in stock) {
 console.log(`${rupture}`);
 
 
+// Exo 6
+
+const nums = [];
+
+function genererAleatoire(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let nombreAleatoire
+
+for (let i = 0 ; i < 20 ; i++) {
+    nombreAleatoire = genererAleatoire(1, 30);
+    nums.push(nombreAleatoire);
+}
+
+console.log(`${nums}`);
+
+for (let i = 0 ; i < nums.length ; i++) {
+    if (nums[i] % 4 === 0 || nums[i] % 6 === 0) {
+        nums[i] *= 2;
+    } else if (nums[i] % 2 !== 0) {
+        nums[i] = 1;
+    }
+}
+
+console.log(`${nums}`);

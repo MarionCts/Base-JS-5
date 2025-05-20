@@ -29,3 +29,30 @@ while(i < notes.length) {
 console.log(`Les notes valides sont ${valides}`);
 
 console.log(`Le nombre de notes invalides est de ${notes.length - valides.length}.`);
+
+// Exo 3
+
+const users = {
+alice: 18,
+bob: 25,
+charlie: 17,
+dave: 30
+};
+
+const usersFinal = [];
+const usersDenied = [];
+
+
+for (nom in users) {
+    let age = users[nom];
+    if (age >= 18 && age !== 25) {
+        usersFinal.push(nom);
+    } else {
+        usersDenied.push(nom);
+    }
+}
+
+console.log(`Accès autorisé pour : ${usersFinal}`);
+console.log(`Accès refusé pour : ${usersDenied}`);
+
+

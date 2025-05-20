@@ -56,3 +56,19 @@ console.log(`Accès autorisé pour : ${usersFinal}`);
 console.log(`Accès refusé pour : ${usersDenied}`);
 
 
+// Exo 4
+
+const nombres = [2, 7, 10, 21, 14, 3];
+let resultats = [];
+
+for (cle of nombres) {
+    if ((cle % 2 === 0 && cle > 5) || (cle % 2 !== 0 && cle < 10)) {
+        resultats.push(cle);
+    }
+}
+
+let e = 0;
+let somme = resultats.reduce((accumulator, currentValue) => accumulator + currentValue, e,);
+
+console.log(somme);
+console.log(resultats);

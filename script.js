@@ -72,3 +72,28 @@ let somme = resultats.reduce((accumulator, currentValue) => accumulator + curren
 
 console.log(somme);
 console.log(resultats);
+
+// Exo 5
+
+const stock = { 
+    pommes: 4, 
+    bananes: 0, 
+    poires: 3, 
+    mangues: 1 
+};
+
+let rupture = [];
+
+for (fruit in stock) {
+    console.log(fruit);
+    console.log(stock[fruit]);
+    while (stock[fruit] > 0) {
+        (stock[fruit])--;
+    }
+    rupture.push(`${fruit}`);
+    console.log(`${fruit} : ${stock[fruit]}`);
+}
+
+console.log(`${rupture}`);
+
+

@@ -121,3 +121,29 @@ for (let i = 0 ; i < nums.length ; i++) {
 }
 
 console.log(`${nums}`);
+
+// Exo 7
+
+const o1 = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+const o2 = {
+    b: 4,
+    c: 3,
+    d: 5
+};
+
+const fusion = { ...o1 };
+
+console.log(fusion);
+
+for (cle in o2) {
+    if (!(cle in fusion) || fusion[cle] !== o2[cle]) { // si la clé de o2 n'existe pas dans fusion, OU si la valeur de la clé de o2 est différente dans fusion
+        fusion[cle] = o2[cle];
+    }
+}
+
+console.log(fusion);

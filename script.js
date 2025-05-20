@@ -147,3 +147,29 @@ for (cle in o2) {
 }
 
 console.log(fusion);
+
+// Exo 8
+
+const produits = [
+    {nom: "stylo", prix: 1.2, dispo: true},
+    {nom: "cahier", prix: 2.5, dispo: false},
+    {nom: "crayon", prix: 0.8, dispo: true},
+    {nom: "gomme", prix: 0.5, dispo: true},
+];
+
+const achats = [];
+const ignores = [];
+
+for (let i = 0 ; i < produits.length ; i++) {
+    if (produits[i].dispo === true && produits[i].prix < 2) {
+        achats.push(produits[i].nom);   
+    } else if (produits[i].dispo === false || produits[i].prix >= 2) {
+        ignores.push(produits[i].nom);
+    }
+}
+
+console.log(achats);
+console.log(ignores);
+
+
+

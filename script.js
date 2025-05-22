@@ -172,4 +172,54 @@ console.log(achats);
 console.log(ignores);
 
 
+// EXO 9
 
+const mot = "kayak";
+
+const chars = [];
+
+const inverse = [];
+
+for (let i = 0 ; i < mot.length; i++) {
+    chars.push(mot[i]);
+}
+
+console.log(chars);
+
+let comparaison
+
+for (let i = chars.length - 1; i >= 0; i--) {
+    inverse.push(chars[i]);
+}
+
+for (let i = chars.length - 1; i >= 0; i--) {
+    
+    if (chars[i] !== inverse[i]) {
+        comparaison = `Ce mot n'est pas un palindrome.`;
+    } else {
+        comparaison = `Ce mot est un palindrome.`;
+        
+    }
+}
+
+console.log(comparaison);
+
+// EXO 10
+
+const grilles = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let sum = 0;
+
+for (tableau of grilles) {
+    for (chiffre of tableau) {      
+        if (chiffre % 2 === 0 && chiffre >= 4 || chiffre % 2 !== 0 && chiffre <= 5) {
+            sum += chiffre;                      
+        }
+    }
+}
+
+console.log(sum);
